@@ -1,0 +1,19 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 5%;
+}
+
+.info-pic {
+    align-items: center;
+    max-width: 70%;
+    align-self: center;
+}
+ 
+.info-title {
+    margin-bottom: 1%;
+}
+
+.info-text {
+    margin-top: 0;
+}

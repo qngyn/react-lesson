@@ -1,0 +1,17 @@
+* {
+	box-sizing: border-box !important;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cards-list {
+    padding: 2% 5%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+
+}
