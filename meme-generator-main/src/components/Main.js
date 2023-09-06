@@ -18,8 +18,8 @@ function Main (){
     */
     useEffect( () => {
         async function getMemes() {
-            const res =  fetch("https://api.imgflip.com/get_memes")
-            const data =  res.json()
+            const res =  await fetch("https://api.imgflip.com/get_memes")
+            const data = await res.json()
             setAllMemes(data.data.memes)
         }
         getMemes()
