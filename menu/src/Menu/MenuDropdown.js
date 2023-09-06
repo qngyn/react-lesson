@@ -1,8 +1,8 @@
-import React from "react"
-
-export default function MenuDropdown({ children, ...props }) {
-    console.log(props)
-    return props.open ? (
+import React, {useContext} from "react"
+import { MenuContext } from "./Menu"
+export default function MenuDropdown({children}) {
+    const open = useContext(MenuContext)
+    return open ? (
         <div className="menu-dropdown">
             {children}
         </div>

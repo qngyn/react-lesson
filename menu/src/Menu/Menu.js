@@ -1,6 +1,6 @@
-import React, {Children, cloneElement} from "react"
+import React, {Children, cloneElement, createContext} from "react"
 
-
+const MenuContext = createContext()
 export default function Menu({children}) {
     const [open, setOpen] = React.useState(true)
 
@@ -9,14 +9,13 @@ export default function Menu({children}) {
     }
 
     return (
-        <div className="menu">
-            {Children.map(children, (child) => {
-                return cloneElement(child, {
-                    open, 
-                    toggle
-                })
-            })}
-        </div>
+        <MenuContext.Provider value={true}>
+            <div className="menu">
+                {children}
+            </div>
+        </MenuContext.Provider>
     )
 }
+
+export { MenuContext }
 /* short hand for open: open, toggle: toggle */
