@@ -9,7 +9,7 @@ export default function Menu({children}) {
     }
 
     return (
-        <MenuContext.Provider value={true}>
+        <MenuContext.Provider value={{open, toggle}}>
             <div className="menu">
                 {children}
             </div>
