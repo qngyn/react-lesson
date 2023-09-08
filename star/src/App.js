@@ -1,7 +1,7 @@
 import React from 'react';
 import Menu from "./components/Menu/index"
 import Star from "./components/Star"
-
+import Toggle from "./components/Toggle/index"
 
 function App() {
   const menu = ["Home", "About", "Contact", "Blog"]
@@ -20,8 +20,30 @@ function App() {
           )}
         </Menu.Dropdown>
       </Menu>
+      <br/>
+      <br/>
+      <>
+      <Toggle>
+        <Toggle.Button>
+          <Toggle.Display>
+            {(on) => {
+              return <div className={`box ${on ? "filled" : ""}`}></div>
+            }}
+          </Toggle.Display>
+        </Toggle.Button>
+      </Toggle>
+    </>
     </>
   );
 }
 
 export default App;
+/*
+
+<Toggle.On>
+            <div className="box filled"></div>
+          </Toggle.On>
+          <Toggle.Off>
+            <div className="box"></div>
+          </Toggle.Off>
+*/
